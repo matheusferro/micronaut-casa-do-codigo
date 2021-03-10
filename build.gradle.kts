@@ -4,6 +4,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.allopen") version "1.4.10"
     id("com.github.johnrengelman.shadow") version "6.1.0"
     id("io.micronaut.application") version "1.3.4"
+    //Construtores deafult. https://kotlinlang.org/docs/no-arg-plugin.html#jpa-support
+    id ("org.jetbrains.kotlin.plugin.jpa") version "1.4.31"
 }
 
 version = "0.1"
