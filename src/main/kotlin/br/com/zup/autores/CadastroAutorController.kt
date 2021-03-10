@@ -12,6 +12,8 @@ class CadastroAutorController {
 
     @Post
     fun cadastro(@Body @Valid request: CadastroAutorRequest){
-        println(request)
+        println("Autor request: ${request}")
+        val autor: Autor = request.paraAutor()
+        println("Autor modelo: ${autor.nome}")
     }
 }
