@@ -1,7 +1,8 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.4.10"
     id("org.jetbrains.kotlin.kapt") version "1.4.10"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.4.10"
+    //plugin para deixar todas as classes definidas no corpo de allOpen abertas
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.4.31"
     id("com.github.johnrengelman.shadow") version "6.1.0"
     id("io.micronaut.application") version "1.3.4"
     //Construtores deafult. https://kotlinlang.org/docs/no-arg-plugin.html#jpa-support
@@ -61,6 +62,7 @@ tasks {
             jvmTarget = "11"
         }
     }
-
-
+}
+allOpen {
+    annotation("io.micronaut.http.annotation.Controller")
 }
